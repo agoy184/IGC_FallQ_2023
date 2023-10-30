@@ -6,6 +6,13 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public static PauseMenu SharedInstance;
+
+    public GameObject optionsMenu;
+
+    private void Awake()
+    {
+        optionsMenu.SetActive(false);
+    }
     
     public void ResumeGame()
     {
