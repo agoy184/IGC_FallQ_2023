@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get { return _instance; } }
 
     public GameObject pauseMenu;
+    public GameObject gameOverMenu;
 
     public static bool isPaused;
 
@@ -32,6 +33,11 @@ public class GameManager : MonoBehaviour
                 PauseGame();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Die();
+        }
     }
 
     public void PauseGame()
@@ -51,5 +57,11 @@ public class GameManager : MonoBehaviour
         isPaused = false;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void Die()
+    {
+        Time.timeScale = 0f;
+        gameOverMenu.SetActive(true);
     }
 }
