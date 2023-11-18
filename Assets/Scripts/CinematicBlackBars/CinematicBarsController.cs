@@ -16,7 +16,14 @@ public class CinematicBarsController : MonoBehaviour
         else if(Instance != null){
             Destroy(gameObject);
         }
+        
         cinematicBarControllerGo.SetActive(false);
+        
+    }
+
+    void Start(){
+        
+        
     }
 
     public void ShowBars(){
@@ -27,6 +34,10 @@ public class CinematicBarsController : MonoBehaviour
         if(cinematicBarControllerGo.activeSelf){
             StartCoroutine(HideBarsAndDisableGO());
         }
+    }
+
+    public void OpenScene(){
+        cinematicBarsAnimator.SetTrigger("SceneStart");
     }
 
     private IEnumerator HideBarsAndDisableGO(){
