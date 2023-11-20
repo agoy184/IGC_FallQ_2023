@@ -51,8 +51,5 @@ public class Menu : MonoBehaviour
         //cinematicBarsAnimator.SetTrigger("SceneStart");
         //CinematicBarsController.Instance.OpenScene();
 
-
-        
-
     }
 }
