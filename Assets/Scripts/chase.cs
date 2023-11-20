@@ -70,6 +70,12 @@ public class chase : MonoBehaviour
             Invoke("seenCooldown", .5f);
             seeInvoke = false;
         }
+
+        // if agent touches player, player dies
+        if (Vector3.Distance(agent.transform.position, target.position) < 2.0f)
+        {
+            GameManager.Instance.Die();
+        }
     }
     void seenCooldown()
     {

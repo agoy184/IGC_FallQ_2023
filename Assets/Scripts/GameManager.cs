@@ -33,11 +33,6 @@ public class GameManager : MonoBehaviour
                 PauseGame();
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            Die();
-        }
     }
 
     public void PauseGame()
