@@ -16,7 +16,8 @@ public class Menu : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        StartCoroutine(IntroCutscene());
+        //SceneManager.LoadScene("SampleScene");
     }
 
     public void QuitGame()
@@ -37,5 +38,21 @@ public class Menu : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+    }
+
+    private IEnumerator IntroCutscene(){
+        if(CinematicBarsController.Instance != null){
+             CinematicBarsController.Instance.ShowBars();
+            }
+        
+        yield return new WaitForSeconds(2f);
+
+        SceneManager.LoadScene("SampleScene");
+        //cinematicBarsAnimator.SetTrigger("SceneStart");
+        //CinematicBarsController.Instance.OpenScene();
+
+
+        
+
     }
 }
