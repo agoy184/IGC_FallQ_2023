@@ -47,7 +47,7 @@ public class Menu : MonoBehaviour
         
         yield return new WaitForSeconds(2f);
 
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("ForestScene");
         //cinematicBarsAnimator.SetTrigger("SceneStart");
         //CinematicBarsController.Instance.OpenScene();
 
