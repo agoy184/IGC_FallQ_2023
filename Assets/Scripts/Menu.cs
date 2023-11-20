@@ -28,16 +28,19 @@ public class Menu : MonoBehaviour
     public void ResumeGame()
     {
         GameManager.Instance.ResumeGame();
+        Time.timeScale = 1f;
     }
 
     public void MainMenu()
     {
         SceneManager.LoadScene("MenuScene");
+        Time.timeScale = 1f;
     }
 
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+        Time.timeScale = 1f;
     }
 
     private IEnumerator IntroCutscene(){
