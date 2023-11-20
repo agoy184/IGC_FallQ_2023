@@ -643,7 +643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 954ec253dd126db46937d417e6d61a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 7
   orientation: {fileID: 839473779}
 --- !u!65 &210141145
 BoxCollider:
@@ -2296,7 +2296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enable: 1
-  amplitude: 0.015
+  amplitude: 0.0192
   frequency: 10
   camera: {fileID: 963194228}
   cameraHolder: {fileID: 2107634261}
