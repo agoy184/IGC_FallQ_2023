@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-        rb.AddForce(moveDirection.normalized * moveSpeed * 100f, ForceMode.Force);
+        rb.AddForce(moveDirection.normalized * moveSpeed * 80f, ForceMode.Force);
 
         //Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         //charCon.Move(move * Time.deltaTime * Speed);

@@ -33,7 +33,7 @@ public class Headbobbing : MonoBehaviour
 
         CheckMotion();
         ResetPosition();
-        camera.LookAt(FocusTarget());
+        //camera.LookAt(FocusTarget());
     }
 
     private void CheckMotion(){
