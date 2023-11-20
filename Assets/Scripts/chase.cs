@@ -30,12 +30,13 @@ public class chase : MonoBehaviour
         canInvoke = true;
         chasing = false;
         countingdown = timeBeforeChase;
+
     }    
 
 
     void Update()
     {
-        
+
         //Check if is seen and player walked past
         if (chasing)
         {
