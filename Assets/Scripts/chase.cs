@@ -8,6 +8,7 @@ public class chase : MonoBehaviour
 
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private Transform target;
+    [SerializeField] private Animator animator;
 
     float isSeen;
     public float watchTime;
@@ -21,6 +22,9 @@ public class chase : MonoBehaviour
     public GameObject monster;
     public LayerMask canSeeLayer;
     public float monsterSpeed;
+    float attackCooldown = 2f;
+    float attackTimer = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,23 +34,21 @@ public class chase : MonoBehaviour
         canInvoke = true;
         chasing = false;
         countingdown = timeBeforeChase;
-
+        animator = GetComponent<Animator>();
     }    
 
 
     void Update()
     {
-
-        //Check if is seen and player walked past
+        speedHandler();
         if (chasing)
         {
-
-            Debug.Log("Chasing");
             if(target != null)
             {
                 agent.SetDestination(target.position);
             }
-        }
+        } 
+
         if(isWalkedPast)
         {
             if (!chasing && canInvoke)
@@ -72,9 +74,22 @@ public class chase : MonoBehaviour
         }
 
         // if agent touches player, player dies
-        if (Vector3.Distance(agent.transform.position, target.position) < 2.0f)
+        if (Vector3.Distance(agent.transform.position, target.position) < 5.0f)
         {
             GameManager.Instance.Die();
+        }
+
+        if (Vector3.Distance(agent.transform.position, target.position) < 12.0f)
+        {
+            if (attackTimer <= 0)
+            {
+                attackTimer = attackCooldown;
+                animator.SetTrigger("Attack");
+            }
+            else
+            {
+                attackTimer -= Time.deltaTime;
+            }
         }
     }
     void seenCooldown()
@@ -104,6 +119,11 @@ public class chase : MonoBehaviour
     public void playerWalkedPast(bool _bool)
     {
         isWalkedPast = _bool;
+    }
+
+    void speedHandler()
+    {
+        animator.SetFloat("Speed", agent.velocity.magnitude);
     }
 
 }
