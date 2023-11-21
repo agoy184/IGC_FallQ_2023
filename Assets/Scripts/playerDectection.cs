@@ -21,7 +21,7 @@ public class playerDectection : MonoBehaviour
         {
             _chase.playerWalkedPast(true);
             Debug.Log("pass");
-
+            FindObjectOfType<AudioManager>().Play("chaseStart");
         }
     }
 }
