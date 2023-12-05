@@ -932,7 +932,13 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
     UNet: 1
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -952,11 +958,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 81aef65c-8deb-42aa-8937-7c8d92f5e503
+  cloudProjectId: 1afdf913-4dc7-414c-a5ff-935d3f4ca903
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: Unity_IGC_FallQ_2023
-  organizationId: 405sagejr
+  organizationId: agoy
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
