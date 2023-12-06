@@ -9,7 +9,7 @@ public class MusicOnExit : MonoBehaviour
     void OnTriggerExit(Collider other) {
         Debug.Log("3");
         if (other.tag == "Player") {
-            audioSource.Stop();
+            audioSource.volume = 0.2f;
             Debug.Log("4");
         }
     }

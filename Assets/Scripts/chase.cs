@@ -110,7 +110,7 @@ public class chase : MonoBehaviour
     {
         if(countingdown > 0)
         {
-            countingdown = countingdown - .5f;
+            countingdown = countingdown - .2f;
         }
         //Debug.Log("countingdown = " + countingdown);
         canInvoke = true;
