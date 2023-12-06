@@ -42,7 +42,7 @@ public class footstepSounds : MonoBehaviour
                     audioSource.clip = stepSounds[i];
                     if (!audioSource.isPlaying)
                     {
-                        audioSource.Play();
+                        //audioSource.Play();
                     }
                 }
             }

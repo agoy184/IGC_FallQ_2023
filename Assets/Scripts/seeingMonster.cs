@@ -28,7 +28,7 @@ public class seeingMonster : MonoBehaviour
             {
                 Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
                 _chase.spottedMonster();
-                Debug.Log("Looking");
+                //Debug.Log("Looking");
             }
             
         }

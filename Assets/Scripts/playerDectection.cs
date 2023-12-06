@@ -11,7 +11,7 @@ public class playerDectection : MonoBehaviour
         if(other.GetComponent<Collider>().gameObject.tag == "Player")
         {
             _chase.playerWalkedPast(false);
-            Debug.Log("not");
+            //Debug.Log("not");
         }
     }
 
@@ -20,7 +20,7 @@ public class playerDectection : MonoBehaviour
         if (other.GetComponent<Collider>().gameObject.tag == "Player")
         {
             _chase.playerWalkedPast(true);
-            Debug.Log("pass");
+            //Debug.Log("pass");
             FindObjectOfType<AudioManager>().Play("chaseStart");
         }
     }

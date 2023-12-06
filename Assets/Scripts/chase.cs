@@ -99,7 +99,7 @@ public class chase : MonoBehaviour
             isSeen -= .5f;
         }
         seeInvoke = true;
-        print("isSeen = " + isSeen);
+        //print("isSeen = " + isSeen);
     }
     public void spottedMonster()
     {
@@ -112,7 +112,7 @@ public class chase : MonoBehaviour
         {
             countingdown = countingdown - .5f;
         }
-        Debug.Log("countingdown = " + countingdown);
+        //Debug.Log("countingdown = " + countingdown);
         canInvoke = true;
     }
 
