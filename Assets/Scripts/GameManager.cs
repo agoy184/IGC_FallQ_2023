@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
     public static GameManager Instance { get { return _instance; } }
 
+    private GameObject player;
+
     public GameObject pauseMenu;
     public GameObject gameOverMenu;
 
@@ -59,4 +61,15 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         gameOverMenu.SetActive(true);
     }
+
+    public void SetPlayer(GameObject player)
+    {
+        this.player = player;
+    }
+
+    public GameObject GetPlayer()
+    {
+        return player;
+    }
+
 }
