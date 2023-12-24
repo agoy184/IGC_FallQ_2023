@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     public GameObject[] innerMenus;
+    public AudioSource audioSource;
 
     private void Awake()
     {
+        audioSource.Play();
         foreach (GameObject menu in innerMenus) {
             menu.SetActive(false);
         }

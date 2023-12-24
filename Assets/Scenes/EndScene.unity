@@ -1630,7 +1630,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   innerMenus:
-  - {fileID: 0}
   - {fileID: 346057132}
 --- !u!1 &1706578655
 GameObject:
